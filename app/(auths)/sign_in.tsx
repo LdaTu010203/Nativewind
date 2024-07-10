@@ -17,7 +17,7 @@ const SignIn = () => {
           Please enter your details to proceed
         </Text>
       </View>
-      <View className="flex-1 self-stretch pt-10 gap-2">
+      <View className="flex-1 self-stretch gap-2">
         <Text className="text-yellow-100 text-base font-PolyRegular">
           Username Or Email
         </Text>
@@ -32,7 +32,7 @@ const SignIn = () => {
                bg-gray-500
                 placeholder:text-sm
                  items-center
-                 placeholder:font-PolyItalic"
+                 placeholder:font-PolyRegular"
         ></TextInput>
         <Text className="text-yellow-100 text-base font-PolyRegular">
           Password
@@ -46,7 +46,7 @@ const SignIn = () => {
                bg-gray-500
                 placeholder:text-sm
                  items-center
-                 placeholder:font-PolyItalic mb-4"
+                 placeholder:font-PolyRegular mb-4"
           secureTextEntry={true}
         ></TextInput>
         <TouchableOpacity
@@ -57,15 +57,18 @@ const SignIn = () => {
             Sign In
           </Text>
         </TouchableOpacity>
-        <Link href={"./sign_up"} className="self-center">
+        <TouchableOpacity
+          onPress={() => router.replace("./forgot")}
+          className="self-center"
+        >
           <Text className="font-PolyRegular text-sm text-yellow-100">
             Forgot Password?
           </Text>
-        </Link>
+        </TouchableOpacity>
       </View>
-      <View className=" flex-1 justify-end self-center items-center pb-11">
+      <View className=" flex-1 justify-end self-center items-center">
         <Text className="font-PolyRegular text-sm text-yellow-100 pb-2">
-          or you can sign up with
+          or you can sign in with
         </Text>
         <View className="flex flex-row self-center gap-3">
           <Ionicons name="logo-facebook" size={45} />
