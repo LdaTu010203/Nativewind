@@ -18,7 +18,9 @@ const SignIn = () => {
         </Text>
       </View>
       <View className="flex-1 self-stretch pt-10 gap-2">
-        <Text className="text-yellow-100 text-base">Username Or Email</Text>
+        <Text className="text-yellow-100 text-base font-PolyRegular">
+          Username Or Email
+        </Text>
         <TextInput
           placeholder="Vietgangz or Vietgangz@gmail.com"
           className="
@@ -26,12 +28,15 @@ const SignIn = () => {
             pb-1
              pl-5
               rounded-3xl
+              font-PolyRegular
                bg-gray-500
                 placeholder:text-sm
                  items-center
-                 placeholder:font-extrabold"
+                 placeholder:font-PolyItalic"
         ></TextInput>
-        <Text className="text-yellow-100 text-base">Password</Text>
+        <Text className="text-yellow-100 text-base font-PolyRegular">
+          Password
+        </Text>
         <TextInput
           placeholder="*****************"
           className="
@@ -41,14 +46,16 @@ const SignIn = () => {
                bg-gray-500
                 placeholder:text-sm
                  items-center
-                 placeholder:font-extrabold mb-4"
+                 placeholder:font-PolyItalic mb-4"
           secureTextEntry={true}
         ></TextInput>
         <TouchableOpacity
           onPress={() => router.push("./(tabs)/home")}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
-          <Text className="text-black text-xl self-center">Sign In</Text>
+          <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
+            Sign In
+          </Text>
         </TouchableOpacity>
         <Link href={"./sign_up"} className="self-center">
           <Text className="font-PolyRegular text-sm text-yellow-100">
