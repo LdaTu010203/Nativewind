@@ -50,7 +50,7 @@ const SignIn = () => {
           secureTextEntry={true}
         ></TextInput>
         <TouchableOpacity
-          onPress={() => router.push("./(tabs)/home")}
+          onPress={() => router.push("/(tabs)/home")}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
           <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
