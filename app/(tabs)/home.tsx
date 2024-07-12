@@ -20,30 +20,31 @@ const Home = () => {
         />
       </View>
       <View className=" self-stretch flex-1 mt-7">
-        <Text className="text-2xl text-white font-PolyRegular">
+        <Text className="text-2xl text-white font-PolyRegular pb-3">
           Purchase history
         </Text>
-        <ScrollView className="flex-1 py-5">
-          <View className="bg-black rounded-3xl py-4 h-36">
-            <View className="flex flex-row px-5 justify-stretch">
-              <Image
-                source={require("@/assets/images/Samurai.png")}
-                className="w-28 h-28 rounded-xl"
-              />
-              <View className="flex flex-col">
-                <Text className="font-PolyRegular text-2xl text-white h-8 pl-14">
-                  Samurai
-                </Text>
-                <Text className="font-PolyRegular text-2xl text-yellow-100 h-11 pl-14">
-                  580.000đ
-                </Text>
-                <Text className="font-PolyRegular text-xs text-gray-400 h-4 pl-9">
-                  OfficalStore-VIETGANGZ
-                </Text>
-                <Text className="font-PolyRegular text-xs text-gray-400 h-7 pl-11">
-                  IG: vietgangz-original
-                </Text>
-              </View>
+        <ScrollView
+          className="flex-1 mb-12"
+          showsVerticalScrollIndicator={false}
+        >
+          <View className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3">
+            <Image
+              source={require("@/assets/images/Samurai.png")}
+              className="h-28 w-28 rounded-xl"
+            />
+            <View className="flex-1 flex flex-col pl-5">
+              <Text className="font-PolyRegular text-lg text-white self-center">
+                Samurai
+              </Text>
+              <Text className="font-PolyRegular text-yellow-300 text-xl self-center">
+                580.000đ
+              </Text>
+              <Text className="font-PolyRegular text-gray-500 text-xs self-center pt-2">
+                OfficalStore-VIETGANGZ
+              </Text>
+              <Text className="font-PolyRegular text-gray-500 text-xs self-center">
+                IG: vietgangz_original
+              </Text>
             </View>
           </View>
         </ScrollView>

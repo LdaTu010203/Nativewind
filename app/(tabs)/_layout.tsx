@@ -4,6 +4,7 @@ import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { Ionicons } from "@expo/vector-icons";
+import { Image, View } from "react-native";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,13 +19,13 @@ export default function TabLayout() {
           borderTopRightRadius: 20,
           position: "absolute",
           height: 90,
-          paddingBottom: 16,
+          paddingBottom: 25,
           backgroundColor: "black",
         },
         headerTitleStyle: {
           fontFamily: "Poly-Regular",
           fontWeight: "600",
-          fontSize: 30,
+          fontSize: 35,
         },
         tabBarItemStyle: {
           gap: -10,
@@ -46,26 +47,27 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="shop"
+        name="search"
         options={{
-          title: "Shop",
+          title: "Search",
           tabBarIcon: () => (
-            <Ionicons name="bag-handle-outline" size={30} color={"white"} />
+            <Ionicons name="search-outline" size={30} color={"white"} />
           ),
           headerTitleAlign: "center",
           headerShadowVisible: false,
         }}
       />
       <Tabs.Screen
-        name="info"
+        name="shop"
         options={{
-          title: "Info",
+          title: "",
           tabBarIcon: () => (
-            <Ionicons
-              name="information-circle-outline"
-              size={30}
-              color={"white"}
-            />
+            <View className=" bg-white w-20 h-20 rounded-full justify-center items-center">
+              <Image
+                source={require("@/assets/images/Logo.png")}
+                className="w-20 h-20"
+              />
+            </View>
           ),
           headerTitleAlign: "center",
           headerShadowVisible: false,
