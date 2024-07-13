@@ -7,6 +7,7 @@ import {
   Image,
 } from "react-native";
 import React from "react";
+import { router } from "expo-router";
 
 const Shop = () => {
   return (
@@ -17,7 +18,10 @@ const Shop = () => {
       <ScrollView className="flex-1 mb-12" showsVerticalScrollIndicator={false}>
         <View className="flex-col flex-1 justify-stretch">
           <View className="flex-row self-stretch gap-1">
-            <TouchableOpacity className="w-48 h-80">
+            <TouchableOpacity
+              className="w-48 h-80"
+              onPress={() => router.push("/(auths)/Items")}
+            >
               <Image
                 source={require("@/assets/images/Samurai.png")}
                 className="w-48 h-52"

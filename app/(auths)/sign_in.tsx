@@ -23,30 +23,17 @@ const SignIn = () => {
         </Text>
         <TextInput
           placeholder="Vietgangz or Vietgangz@gmail.com"
+          placeholderTextColor={"gray"}
           className="
-           h-10
-            pb-1
-             pl-5
-              rounded-3xl
-              font-PolyRegular
-               bg-gray-500
-                placeholder:text-sm
-                 items-center
-                 placeholder:font-PolyRegular"
+           h-10 self-stretch pb-2 pl-5 rounded-full font-PolyRegular bg-white placeholder:text-base items-center placeholder:font-PolyRegular"
         ></TextInput>
         <Text className="text-yellow-100 text-base font-PolyRegular">
           Password
         </Text>
         <TextInput
-          placeholder="*****************"
+          placeholderTextColor={"gray"}
           className="
-           h-10
-             pl-5
-              rounded-3xl
-               bg-gray-500
-                placeholder:text-sm
-                 items-center
-                 placeholder:font-PolyRegular mb-4"
+            h-10 self-stretch pb-2 pl-5 rounded-full font-PolyRegular bg-white placeholder:text-base items-center placeholder:font-PolyRegular mb-5"
           secureTextEntry={true}
         ></TextInput>
         <TouchableOpacity

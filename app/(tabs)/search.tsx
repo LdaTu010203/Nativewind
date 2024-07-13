@@ -4,8 +4,10 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Image,
 } from "react-native";
 import React from "react";
+import { router } from "expo-router";
 
 const Search = () => {
   return (
@@ -13,8 +15,17 @@ const Search = () => {
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-5 pt-10">
         Search
       </Text>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <View className="flex-1 justify-stretch flex-row gap-5">
+      <TextInput
+        className="h-10 self-stretch pb-2 pl-5 rounded-full font-PolyRegular bg-white placeholder:text-base items-center placeholder:font-PolyRegular"
+        placeholderTextColor={"gray"}
+        placeholder="Search"
+      ></TextInput>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        className="w-96 h-20 flex-grow-0"
+      >
+        <View className="h-1 justify-stretch flex-row gap-5 pt-5">
           <TouchableOpacity className="bg-yellow-100 w-24 h-12 items-center justify-center rounded-2xl">
             <Text className="text-base font-PolyRegular text-black">
               Hoodies
@@ -73,6 +84,39 @@ const Search = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      <View className=" self-stretch flex-1 mt-7">
+        <Text className="text-3xl text-yellow-100 font-PolyRegular pb-3">
+          Top Searches
+        </Text>
+        <ScrollView
+          className="flex-1 mb-12"
+          showsVerticalScrollIndicator={false}
+        >
+          <TouchableOpacity
+            className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3"
+            onPress={() => router.push("/(auths)/Items")}
+          >
+            <Image
+              source={require("@/assets/images/Samurai.png")}
+              className="h-28 w-28 rounded-xl"
+            />
+            <View className="flex-1 flex flex-col pl-5">
+              <Text className="font-PolyRegular text-lg text-white self-center">
+                Samurai
+              </Text>
+              <Text className="font-PolyRegular text-yellow-300 text-xl self-center">
+                580.000đ
+              </Text>
+              <Text className="font-PolyRegular text-gray-500 text-xs self-center pt-2">
+                OfficalStore-VIETGANGZ
+              </Text>
+              <Text className="font-PolyRegular text-gray-500 text-xs self-center">
+                IG: vietgangz_original
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
     </View>
   );
 };

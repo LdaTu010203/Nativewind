@@ -1,6 +1,7 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 const Home = () => {
   return (
@@ -27,7 +28,10 @@ const Home = () => {
           className="flex-1 mb-12"
           showsVerticalScrollIndicator={false}
         >
-          <View className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3">
+          <TouchableOpacity
+            className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3"
+            onPress={() => router.push("/(auths)/Items")}
+          >
             <Image
               source={require("@/assets/images/Samurai.png")}
               className="h-28 w-28 rounded-xl"
@@ -46,7 +50,7 @@ const Home = () => {
                 IG: vietgangz_original
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     </View>
