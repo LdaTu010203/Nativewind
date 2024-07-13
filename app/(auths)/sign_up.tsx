@@ -112,13 +112,12 @@ const SignUp = () => {
             Term of Use
           </Text>
           <Text className="font-PolyRegular text-sm text-white pb-2"> and</Text>
-          <Text className="font-PolyRegular text-sm text-yellow-100 pb-2">
-            {" "}
+          <Text className="font-PolyRegular text-sm text-yellow-100 pb-2 pl-1">
             Privacy Policy
           </Text>
         </View>
         <TouchableOpacity
-          onPress={() => router.push("./(tabs)/home")}
+          onPress={() => router.push("/(tabs)/home")}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
           <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">

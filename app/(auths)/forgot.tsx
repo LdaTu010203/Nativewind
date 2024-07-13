@@ -33,7 +33,7 @@ const Forgot = () => {
         />
         <View className="py-4"></View>
         <TouchableOpacity
-          onPress={() => router.push("./sign_in")}
+          onPress={() => router.replace("/sign_in")}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
           <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">

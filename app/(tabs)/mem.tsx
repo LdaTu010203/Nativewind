@@ -10,7 +10,7 @@ import React from "react";
 import { Linking } from "react-native";
 import Contacts from "react-native";
 
-const fanpage = "https://www.facebook.com/groups/240315286608011";
+const fanpage = "https://www.facebook.com/vietgangz";
 
 const handlePress = () => {
   Linking.canOpenURL(fanpage).then((supported) => {
