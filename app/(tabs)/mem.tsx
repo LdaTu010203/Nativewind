@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { Linking } from "react-native";
-import { Contact } from "react-native-contacts";
+import Contacts from "react-native";
 
 const fanpage = "https://www.facebook.com/groups/240315286608011";
 
@@ -20,19 +20,6 @@ const handlePress = () => {
       console.log(`Cannot open URL: ${fanpage}`);
     }
   });
-};
-
-const handlePhone = async () => {
-  try {
-    const isAuthorized = await Contact.requestPermission();
-    if (isAuthorized) {
-      Contacts.openContacts();
-    } else {
-      console.log("Permission denied");
-    }
-  } catch (error) {
-    console.log(error);
-  }
 };
 
 const Mem = () => {
@@ -70,21 +57,21 @@ const Mem = () => {
           <Text className="text-xl font-PolyRegular text-yellow-100 pt-5">
             You don't have member card?
           </Text>
-          <Text className="items-center text-xl font-PolyRegular text-yellow-100 pt-5">
+          <Text className="items-center text-xl font-PolyRegular text-white pt-3">
             Please contact the branches
           </Text>
           <View className="flex-row">
-            <Text className="items-center text-xl font-PolyRegular text-yellow-100">
+            <Text className="items-center text-xl font-PolyRegular text-white">
               or contact directly
             </Text>
-            <TouchableOpacity onPress={handlePhone}>
+            <TouchableOpacity onPress={handlePress}>
               <Text className=" pl-1 items-center text-xl font-PolyRegular text-yellow-500">
                 0941515705
               </Text>
             </TouchableOpacity>
           </View>
           <View className="flex-row">
-            <Text className="text-xl font-PolyRegular text-yellow-100 pt-5">
+            <Text className="text-xl font-PolyRegular text-white pt-5">
               Fanpage:
             </Text>
             <TouchableOpacity onPress={handlePress}>
