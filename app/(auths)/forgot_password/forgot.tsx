@@ -2,55 +2,42 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import React from "react";
 import { router } from "expo-router";
 
-const Change = () => {
+const Forgot = () => {
   return (
-    <View className="flex-1 bg-gray-700 justify-center items-center p-10">
+    <View className="flex-1 items-center justify-center bg-gray-700 p-5">
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-12 pt-10">
-        Set Password
+        Forgot Password
       </Text>
       <View className="flex-0 self-stretch gap-2 pb-10 pt-14">
         <Text className="font-PolyRegular text-yellow-100 text-3xl">
-          Change The Password
+          Reset Password?
         </Text>
       </View>
-      <View className="flex-1 self-stretch gap-2">
-        <Text className="text-yellow-100 text-base font-PolyRegular">
-          Password
+      <View className="bg-gray-500 flex-1 self-stretch rounded-t-3xl py-6 px-3 ">
+        <Text className="text-yellow-100 font-PolyRegular text-xl pb-3">
+          Enter Your Email Address
         </Text>
         <TextInput
-          placeholder="*****************"
+          placeholder="Vietgangz@gmail.com"
           className="
            h-10
             pb-1
              pl-5
               rounded-3xl
               font-PolyRegular
-               bg-gray-500
+               bg-yellow-100
                 placeholder:text-sm
                  items-center
                  placeholder:font-PolyRegular"
-        ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
-          Confirm Password
-        </Text>
-        <TextInput
-          placeholder="*****************"
-          className="
-           h-10
-             pl-5
-              rounded-3xl
-               bg-gray-500
-                placeholder:text-sm
-                 items-center
-                 placeholder:font-PolyRegular mb-4"
-          secureTextEntry={true}
-        ></TextInput>
+          placeholderTextColor={"gray"}
+        />
+        <View className="py-4"></View>
         <TouchableOpacity
-          onPress={() => router.replace("./sign_in")}
+          onPress={() => router.back()}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
           <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
-            Reset Password
+            Send
           </Text>
         </TouchableOpacity>
       </View>
@@ -58,4 +45,4 @@ const Change = () => {
   );
 };
 
-export default Change;
+export default Forgot;

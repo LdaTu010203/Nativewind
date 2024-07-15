@@ -52,7 +52,7 @@ const Acc = () => {
       </View>
       <TouchableOpacity
         className="items-center h-12 rounded-full justify-center bg-gray-500 mb-7"
-        onPress={() => router.push("/(auths)/change")}
+        onPress={() => router.replace("/(auths)/change_password/page")}
       >
         <Text className="text-white font-PolyRegular text-xl">
           Change Password
@@ -66,7 +66,7 @@ const Acc = () => {
       </TouchableOpacity>
       <TouchableOpacity
         className="items-center h-12 rounded-full justify-center bg-gray-500"
-        onPress={() => router.replace("/(auths)/sign_in")}
+        onPress={() => router.replace("/(auths)/SignIn/page")}
       >
         <Text className="text-white font-PolyRegular text-xl">Sign Out</Text>
       </TouchableOpacity>

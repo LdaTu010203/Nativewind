@@ -1,6 +1,5 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { Ionicons } from "@expo/vector-icons";
@@ -22,6 +21,8 @@ export default function TabLayout() {
           paddingBottom: 25,
           backgroundColor: "black",
         },
+        headerShadowVisible: false,
+        headerTitleAlign: "center",
         headerTitleStyle: {
           fontFamily: "Poly-Regular",
           fontWeight: "600",
@@ -36,29 +37,23 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="home"
+        name="Home"
         options={{
-          title: "Home",
           tabBarIcon: () => (
             <Ionicons name="home-outline" size={30} color={"white"} />
           ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
         }}
       />
       <Tabs.Screen
-        name="search"
+        name="Search"
         options={{
-          title: "Search",
           tabBarIcon: () => (
             <Ionicons name="search-outline" size={30} color={"white"} />
           ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
         }}
       />
       <Tabs.Screen
-        name="shop"
+        name="Shop"
         options={{
           title: "",
           tabBarIcon: () => (
@@ -69,30 +64,22 @@ export default function TabLayout() {
               />
             </View>
           ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
         }}
       />
       <Tabs.Screen
-        name="mem"
+        name="Member"
         options={{
-          title: "Member",
           tabBarIcon: () => (
             <Ionicons name="card-outline" size={30} color={"white"} />
           ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
         }}
       />
       <Tabs.Screen
-        name="acc"
+        name="Account"
         options={{
-          title: "Account",
           tabBarIcon: () => (
             <Ionicons name="person-circle-outline" size={30} color={"white"} />
           ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
         }}
       />
     </Tabs>

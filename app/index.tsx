@@ -1,6 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React, { useEffect, useState } from "react";
-import SignIn from "./(auths)/sign_in";
+import SignIn from "./(auths)/SignIn/page";
 
 const Welcome = () => {
   const [loading, setLoading] = useState(true);

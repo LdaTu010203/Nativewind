@@ -1,14 +1,24 @@
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Switch,
+  useColorScheme,
+} from "react-native";
 import React from "react";
 import { Link, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 const SignIn = () => {
+  const toogleColorScheme = useColorScheme();
+
   return (
     <View className="flex-1 bg-gray-700 justify-center items-center p-10">
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-20 pt-10">
         Sign In
       </Text>
+      <Switch value={true} onChange={toogleColorScheme} />
       <View className="self-center, justify-center items-center pb-10">
         <Text className="font-PolyItalic text-yellow-100 text-3xl">
           Welcome To VietGangz
@@ -37,7 +47,7 @@ const SignIn = () => {
           secureTextEntry={true}
         ></TextInput>
         <TouchableOpacity
-          onPress={() => router.push("/(tabs)/home")}
+          onPress={() => router.replace("/(tabs)/Home/page")}
           className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
         >
           <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
@@ -45,7 +55,7 @@ const SignIn = () => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => router.replace("./forgot")}
+          onPress={() => router.push("/(auths)/forgot_password/page")}
           className="self-center"
         >
           <Text className="font-PolyRegular text-sm text-yellow-100">
@@ -66,7 +76,7 @@ const SignIn = () => {
             Don't have an account?
           </Text>
           <Link
-            href={"./sign_up"}
+            href={"/(auths)/SignUp/page"}
             className="font-PolyRegular text-base text-yellow-100 pb-1"
           >
             <Text> Sign Up</Text>
