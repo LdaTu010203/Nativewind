@@ -1,9 +1,31 @@
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import React from "react";
+import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import React, { useState } from "react";
 import { Link, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { createUser } from "@/lib/appwrite";
+import merge from "./../../../node_modules/react-native-appwrite/node_modules/@react-native-community/cli-config/build/merge.d";
 
 const SignUp = () => {
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const submit = async () => {
+    if (!form.email || !form.password) {
+      Alert.alert("Error", "Please fill in all the fields");
+    }
+    setIsSubmitting(true);
+
+    try {
+      const result = await createUser(form.email, form.password);
+      router.replace("/(tabs)/Home/page");
+    } catch (error) {
+      Alert.alert("Error", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <View className="flex-1 items-center justify-center bg-gray-700 p-10">
       <Text className="text-4xl pb-20 pt-10 font-PolyRegular text-yellow-100 pb-5">

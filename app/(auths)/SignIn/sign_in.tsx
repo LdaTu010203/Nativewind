@@ -11,14 +11,11 @@ import { Link, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 const SignIn = () => {
-  const toogleColorScheme = useColorScheme();
-
   return (
     <View className="flex-1 bg-gray-700 justify-center items-center p-10">
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-20 pt-10">
         Sign In
       </Text>
-      <Switch value={true} onChange={toogleColorScheme} />
       <View className="self-center, justify-center items-center pb-10">
         <Text className="font-PolyItalic text-yellow-100 text-3xl">
           Welcome To VietGangz
