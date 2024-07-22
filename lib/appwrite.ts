@@ -1,5 +1,4 @@
 import { Account, Avatars, Client, Databases, ID } from "react-native-appwrite";
-import SignIn from "./../app/(auths)/SignIn/sign_in";
 export const config = {
   endpoint: "https://cloud/.appwrite.io/v1",
   platform: "com.jsm.vietgangz",
@@ -22,7 +21,11 @@ const account = new Account(client);
 const avatar = new Avatars(client);
 const databases = new Databases(client);
 
-export const createUser = async (email, password, username) => {
+export const createUser = async (
+  email: string,
+  password: string,
+  username: string
+) => {
   try {
     const newAccount = await account.create(
       ID.unique(),
@@ -35,7 +38,7 @@ export const createUser = async (email, password, username) => {
 
     const avatarUrl = avatar.getInitials(username);
 
-    await SignIn(email, password);
+    await Signin(email, password);
 
     const newUser = await databases.createDocument(
       config.databaseId,
@@ -49,18 +52,18 @@ export const createUser = async (email, password, username) => {
     );
 
     return newUser;
-  } catch (error) {
+  } catch (error: any) {
     console.log(error);
     throw new Error(error);
   }
 };
 
-export async function SignIn(email, password) {
+export async function Signin(email: string, password: string) {
   try {
     const session = await account.createEmailPasswordSession(email, password);
 
     return session;
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(error);
   }
 }
