@@ -58,7 +58,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="shop"
+        name="mem"
         options={{
           title: "",
           tabBarIcon: () => (
@@ -74,11 +74,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="mem"
+        name="shop"
         options={{
-          title: "Member",
+          title: "Shop",
           tabBarIcon: () => (
-            <Ionicons name="card-outline" size={30} color={"white"} />
+            <Ionicons name="bag-handle-outline" size={30} color={"white"} />
           ),
           headerTitleAlign: "center",
           headerShadowVisible: false,
