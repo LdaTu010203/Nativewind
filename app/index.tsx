@@ -13,7 +13,7 @@ const Welcome = () => {
 
   if (loading) {
     return (
-      <View className="flex-1 items-center justify-center bg-gray-700">
+      <View className="flex-1 items-center justify-center Dark: bg-Dark-Background">
         <Image
           source={require("@/assets/images/Logo.png")}
           className="w-96 h-96"

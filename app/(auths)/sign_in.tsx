@@ -1,22 +1,25 @@
-import { View, Text, TextInput, TouchableOpacity, Switch } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Switch,
+  StatusBar,
+} from "react-native";
 import React, { useState } from "react";
 import { Link, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 const SignIn = () => {
-  const [switchValue, setSwitchValue] = useState(true);
-
-  const toggleSwitch = (value: boolean) => {
-    setSwitchValue(value);
-  };
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <View className="flex-1 bg-gray-700 justify-center items-center p-10">
-      <Text className="font-PolyRegular text-yellow-100 text-4xl pt-10 pb-10">
+    <View className="flex-1 Dark: bg-dark-Background justify-center items-center p-10">
+      <Text className="font-PolyRegular Dark: text-4xl pt-10 pb-10">
         Sign In
       </Text>
-      <Switch onValueChange={toggleSwitch} value={switchValue} />
+      <Switch onValueChange={setDarkMode} value={darkMode} />
       <Text className="self-center font-PolyRegular text-yellow-100 text-2xl pb-10">
-        {switchValue ? "Dark" : "Light"}
+        {darkMode ? "Dark" : "Light"}
       </Text>
       <View className="self-center, justify-center items-center pb-10">
         <Text className="font-PolyItalic text-yellow-100 text-3xl">

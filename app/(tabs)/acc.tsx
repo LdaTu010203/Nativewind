@@ -16,37 +16,35 @@ const Acc = () => {
           </View>
           <View className="flex-col h-20 pl-5 justify-center">
             <Text className="text-2xl text-black pb-1 font-medium">Tú Lê</Text>
-            <TouchableOpacity className="rounded-full bg-white w-36 h-6 pl-1 pt-1">
-              <Text className="text-xs text-black font-medium">
-                Thành viên thân thiết
-              </Text>
+            <TouchableOpacity className="rounded-full bg-white w-24 h-6 pl-1 pt-1 items-center">
+              <Text className="text-xs text-black font-medium">VIP Member</Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
-      <View className="flex-row justify-stretch pl-1 py-5">
-        <TouchableOpacity className="h-24 justify-center items-center px-4">
+      <View className="flex-row justify-stretch pl-1 py-5 items-center">
+        <TouchableOpacity className="h-24 justify-center items-center px-8">
           <Ionicons name="wallet-sharp" size={30} />
           <Text className="text-xs text-white font-PolyRegular pt-2">
-            Chờ xác nhận
+            Confirm
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity className="h-24 justify-center items-center px-4">
+        <TouchableOpacity className="h-24 justify-center items-center px-8">
           <Ionicons name="file-tray-full-sharp" size={30} />
           <Text className="text-xs text-white font-PolyRegular pt-2">
-            Chờ lấy hàng
+            Pickup
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity className="h-24 justify-center items-center px-4">
+        <TouchableOpacity className="h-24 justify-center items-center px-8">
           <Ionicons name="airplane-sharp" size={30} />
           <Text className="text-xs text-white font-PolyRegular pt-2">
-            Chờ giao hàng
+            Delivery
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity className="h-24 justify-center items-center px-4">
+        <TouchableOpacity className="h-24 justify-center items-center px-8">
           <Ionicons name="thumbs-up-sharp" size={30} />
           <Text className="text-xs text-white font-PolyRegular pt-2">
-            Đánh giá
+            Evaluate
           </Text>
         </TouchableOpacity>
       </View>

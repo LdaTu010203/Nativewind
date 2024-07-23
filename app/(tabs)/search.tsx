@@ -9,10 +9,11 @@ import {
 } from "react-native";
 import React from "react";
 import { router } from "expo-router";
+import ItemList from "@/components/organism/itemList";
 
 const Search = () => {
   return (
-    <View className="flex-1 bg-gray-700 justify-center items-center p-10">
+    <View className="flex-1 bg-gray-700 justify-center items-center p-5">
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-5 pt-10">
         Search
       </Text>
@@ -85,38 +86,11 @@ const Search = () => {
           </TouchableHighlight>
         </View>
       </ScrollView>
-      <View className=" self-stretch flex-1 mt-7">
+      <View className=" self-stretch flex-1">
         <Text className="text-3xl text-yellow-100 font-PolyRegular pb-3">
           Top Searches
         </Text>
-        <ScrollView
-          className="flex-1 mb-12"
-          showsVerticalScrollIndicator={false}
-        >
-          <TouchableOpacity
-            className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3"
-            onPress={() => router.push("/(auths)/Items")}
-          >
-            <Image
-              source={require("@/assets/images/Samurai.png")}
-              className="h-28 w-28 rounded-xl"
-            />
-            <View className="flex-1 flex flex-col pl-5">
-              <Text className="font-PolyRegular text-lg text-white self-center">
-                Samurai
-              </Text>
-              <Text className="font-PolyRegular text-yellow-300 text-xl self-center">
-                580.000đ
-              </Text>
-              <Text className="font-PolyRegular text-gray-500 text-xs self-center pt-2">
-                OfficalStore-VIETGANGZ
-              </Text>
-              <Text className="font-PolyRegular text-gray-500 text-xs self-center">
-                IG: vietgangz_original
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </ScrollView>
+        <ItemList />
       </View>
     </View>
   );

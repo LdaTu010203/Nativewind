@@ -1,6 +1,5 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { Ionicons } from "@expo/vector-icons";
@@ -40,7 +39,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: () => (
-            <Ionicons name="home-outline" size={30} color={"white"} />
+            <Ionicons name="home-outline" size={35} color={"white"} />
           ),
           headerTitleAlign: "center",
           headerShadowVisible: false,
@@ -48,17 +47,6 @@ export default function TabLayout() {
       />
       <Tabs.Screen
         name="search"
-        options={{
-          title: "Search",
-          tabBarIcon: () => (
-            <Ionicons name="search-outline" size={30} color={"white"} />
-          ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
-        }}
-      />
-      <Tabs.Screen
-        name="mem"
         options={{
           title: "",
           tabBarIcon: () => (
@@ -74,22 +62,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="shop"
-        options={{
-          title: "Shop",
-          tabBarIcon: () => (
-            <Ionicons name="bag-handle-outline" size={30} color={"white"} />
-          ),
-          headerTitleAlign: "center",
-          headerShadowVisible: false,
-        }}
-      />
-      <Tabs.Screen
         name="acc"
         options={{
           title: "Account",
           tabBarIcon: () => (
-            <Ionicons name="person-circle-outline" size={30} color={"white"} />
+            <Ionicons name="person-circle-outline" size={35} color={"white"} />
           ),
           headerTitleAlign: "center",
           headerShadowVisible: false,
