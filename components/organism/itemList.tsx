@@ -56,23 +56,23 @@ const ItemList = () => {
         }) => (
           <TouchableOpacity
             onPress={() => handleSelectProduct(product.item)}
-            className="bg-black rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3"
+            className="bg-Dark-Background rounded-3xl justify-center items-center flex-1 flex flex-row px-5 py-3 mb-3"
           >
             <Image
               source={product.item.image}
               className="h-28 w-28 rounded-xl"
             />
             <View className="flex-1 flex flex-col pl-5">
-              <Text className="font-PolyItalic text-xl text-white self-center">
+              <Text className="font-PolyRegular text-xl text-Dark-header self-center">
                 {product.item.name}
               </Text>
-              <Text className="font-PolyRegular text-yellow-300 text-xl self-center">
+              <Text className="font-PolyRegular text-Dark-textContent text-xl self-center">
                 {product.item.price}.000đ
               </Text>
-              <Text className="font-PolyRegular text-gray-500 text-xs self-center pt-2">
+              <Text className="font-PolyRegular text-Dark-header text-xs self-center pt-2">
                 OfficalStore-VIETGANGZ
               </Text>
-              <Text className="font-PolyRegular text-gray-500 text-xs self-center">
+              <Text className="font-PolyRegular text-Dark-header text-xs self-center">
                 IG: vietgangz_original
               </Text>
             </View>

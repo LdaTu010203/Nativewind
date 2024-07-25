@@ -12,13 +12,16 @@ module.exports = {
       },
       colors: {
         Dark: {
-          PolyRegular: ["Poly-Regular"],
-          PolyItalic: ["Poly-Italic"],
-          Background: "#000000",
-          White: "#FFFF",
-          MainColor: "#F6F7D3",
-          Gray: "#495664",
-          header: "#929AAB",
+          Background: "#343434",
+          textTitle: "#FCFAF1",
+          textContent: "#E6B31E",
+          header: "#CACACA",
+        },
+        Light: {
+          Background: "#FCFAF1",
+          textTitle: "#343434",
+          textContent: "#E6B31E",
+          header: "#CACACA",
         },
       },
     },

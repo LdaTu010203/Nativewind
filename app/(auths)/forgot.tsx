@@ -4,7 +4,7 @@ import { router } from "expo-router";
 
 const Forgot = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-gray-700 p-5">
+    <View className="flex-1 items-center justify-center bg-Dark-Background p-5">
       <Text className="font-PolyRegular text-yellow-100 text-4xl pb-12 pt-10">
         Forgot Password
       </Text>

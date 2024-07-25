@@ -5,12 +5,12 @@ import { Ionicons } from "@expo/vector-icons";
 
 const SignUp = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-gray-700 p-10">
-      <Text className="text-4xl pb-20 pt-10 font-PolyRegular text-yellow-100 pb-5">
+    <View className="flex-1 items-center justify-center bg-Dark-Background p-10">
+      <Text className="text-4xl pb-5 pt-10 font-PolyRegular text-Dark-textContent">
         Create Account
       </Text>
       <View className="flex-1 self-stretch gap-2">
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           FullName
         </Text>
         <TextInput
@@ -25,7 +25,7 @@ const SignUp = () => {
                  items-center
                  placeholder:font-Regular"
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Email
         </Text>
         <TextInput
@@ -40,7 +40,7 @@ const SignUp = () => {
                  items-center
                  placeholder:font-PolyRegular"
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Phone Number
         </Text>
         <TextInput
@@ -55,7 +55,7 @@ const SignUp = () => {
                  items-center
                  placeholder:font-PolyRegular"
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Date Of Birth
         </Text>
         <TextInput
@@ -70,7 +70,7 @@ const SignUp = () => {
                  items-center
                  placeholder:font-PolyRegular"
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Password
         </Text>
         <TextInput
@@ -86,7 +86,7 @@ const SignUp = () => {
                  placeholder:font-PolyRegular"
           secureTextEntry={true}
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Confirm Password
         </Text>
         <TextInput
@@ -108,25 +108,25 @@ const SignUp = () => {
           By continuing, you agree to
         </Text>
         <View className="flex flex-row">
-          <Text className="font-PolyRegular text-sm text-yellow-100 pb-2">
+          <Text className="font-PolyRegular text-sm text-Dark-textContent pb-2">
             Term of Use
           </Text>
           <Text className="font-PolyRegular text-sm text-white pb-2"> and</Text>
-          <Text className="font-PolyRegular text-sm text-yellow-100 pb-2 pl-1">
+          <Text className="font-PolyRegular text-sm text-Dark-textContent pb-2 pl-1">
             Privacy Policy
           </Text>
         </View>
         <TouchableOpacity
           onPress={() => router.push("/(tabs)/home")}
-          className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
+          className="self-center w-48 h-12 rounded-full pt-2 bg-Dark-textContent"
         >
-          <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
+          <Text className="text-Dark-Background text-xl self-center font-PolyRegular font-extrabold">
             Sign Up
           </Text>
         </TouchableOpacity>
       </View>
       <View className=" flex-1 justify-end self-center items-center">
-        <Text className="font-PolyRegular text-sm text-yellow-100 pb-2">
+        <Text className="font-PolyRegular text-sm text-Dark-textContent pb-2">
           or you can sign up with
         </Text>
         <View className="flex flex-row self-center gap-3">
@@ -139,7 +139,7 @@ const SignUp = () => {
           </Text>
           <Link
             href={"./sign_in"}
-            className="font-PolyRegular text-base text-yellow-100 pb-1"
+            className="font-PolyRegular text-base text-Dark-textContent pb-1"
           >
             <Text> Sign In</Text>
           </Link>

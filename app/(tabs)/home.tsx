@@ -6,13 +6,13 @@ import ItemList from "@/components/organism/itemList";
 
 const Home = () => {
   return (
-    <View className="flex-1 bg-gray-700 justify-center items-center p-5">
+    <View className="flex-1 bg-Dark-Background justify-center items-center p-5">
       <View className="p-4 flex flex-row self-center pt-10">
         <View className="flex flex-col px-2">
-          <Text className="font-PolyRegular text-2xl text-yellow-100">
+          <Text className="font-PolyRegular text-2xl text-Dark-textContent">
             Welcome Back, Homie
           </Text>
-          <Text className="font-PolyRegular text-2xl text-yellow-100">
+          <Text className="font-PolyRegular text-2xl text-Dark-textContent">
             How's going today?
           </Text>
         </View>
@@ -22,7 +22,7 @@ const Home = () => {
         />
       </View>
       <View className=" self-stretch flex-1">
-        <Text className="text-2xl text-white font-PolyRegular pb-3">
+        <Text className="text-2xl text-Dark-textTitle font-PolyRegular pb-3">
           Purchase history
         </Text>
         <ItemList />

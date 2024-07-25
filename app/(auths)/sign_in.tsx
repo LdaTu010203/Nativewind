@@ -1,36 +1,24 @@
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Switch,
-  StatusBar,
-} from "react-native";
-import React, { useState } from "react";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import React from "react";
 import { Link, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 const SignIn = () => {
-  const [darkMode, setDarkMode] = useState(true);
   return (
-    <View className="flex-1 Dark: bg-dark-Background justify-center items-center p-10">
-      <Text className="font-PolyRegular Dark: text-4xl pt-10 pb-10">
+    <View className="flex-1 bg-Dark-Background justify-center items-center p-10">
+      <Text className="font-PolyRegular text-Dark-textContent text-4xl pt-10 pb-10">
         Sign In
       </Text>
-      <Switch onValueChange={setDarkMode} value={darkMode} />
-      <Text className="self-center font-PolyRegular text-yellow-100 text-2xl pb-10">
-        {darkMode ? "Dark" : "Light"}
-      </Text>
-      <View className="self-center, justify-center items-center pb-10">
-        <Text className="font-PolyItalic text-yellow-100 text-3xl">
+      <View className="self-center, justify-center items-center pb-10 pt-10">
+        <Text className="font-PolyItalic text-Dark-textContent text-3xl">
           Welcome To VietGangz
         </Text>
-        <Text className="font-PolyRegular text-yellow-100 text-sm">
+        <Text className="font-PolyRegular text-Dark-textContent text-sm">
           Please enter your details to proceed
         </Text>
       </View>
-      <View className="flex-1 self-stretch gap-2">
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+      <View className="flex-1 self-stretch gap-2 pt-10">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Username Or Email
         </Text>
         <TextInput
@@ -39,7 +27,7 @@ const SignIn = () => {
           className="
            h-10 self-stretch pb-2 pl-5 rounded-full font-PolyRegular bg-white placeholder:text-base items-center placeholder:font-PolyRegular"
         ></TextInput>
-        <Text className="text-yellow-100 text-base font-PolyRegular">
+        <Text className="text-Dark-textContent text-base font-PolyRegular">
           Password
         </Text>
         <TextInput
@@ -50,9 +38,9 @@ const SignIn = () => {
         ></TextInput>
         <TouchableOpacity
           onPress={() => router.push("/(tabs)/home")}
-          className="self-center w-48 h-12 rounded-full pt-2 bg-yellow-100"
+          className="self-center w-48 h-12 rounded-full pt-2 bg-Dark-textContent"
         >
-          <Text className="text-black text-xl self-center font-PolyRegular font-extrabold">
+          <Text className="text-Dark-Background text-xl self-center font-PolyRegular font-extrabold">
             Sign In
           </Text>
         </TouchableOpacity>
@@ -60,18 +48,18 @@ const SignIn = () => {
           onPress={() => router.replace("./forgot")}
           className="self-center"
         >
-          <Text className="font-PolyRegular text-sm text-yellow-100">
+          <Text className="font-PolyRegular text-sm text-Dark-textContent">
             Forgot Password?
           </Text>
         </TouchableOpacity>
       </View>
       <View className=" flex-1 justify-end self-center items-center">
-        <Text className="font-PolyRegular text-sm text-yellow-100 pb-2">
+        <Text className="font-PolyRegular text-sm text-Dark-textContent pb-2">
           or you can sign in with
         </Text>
         <View className="flex flex-row self-center gap-3">
-          <Ionicons name="logo-facebook" size={45} />
-          <Ionicons name="logo-google" size={45} />
+          <Ionicons name="logo-facebook" size={45} color="white" />
+          <Ionicons name="logo-google" size={45} color="white" />
         </View>
         <View className="flex flex-row self-center">
           <Text className="font-PolyRegular text-base text-white">
@@ -79,7 +67,7 @@ const SignIn = () => {
           </Text>
           <Link
             href={"./sign_up"}
-            className="font-PolyRegular text-base text-yellow-100 pb-1"
+            className="font-PolyRegular text-base text-Dark-textContent pb-1"
           >
             <Text> Sign Up</Text>
           </Link>
