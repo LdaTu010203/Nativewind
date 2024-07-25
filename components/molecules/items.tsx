@@ -1,9 +1,14 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { router } from "expo-router";
+import products from "@/components/organism/itemList";
 
-const DisplayProduct = ({ route }: any) => {
-  const { product } = route.params;
+const DisplayProduct = ({ productID }: any) => {
+  const product = products.find((product) => product.id === productID);
+
+  if (!user) {
+    return <Text>Không tìm thấy người dùng</Text>;
+  }
 
   return (
     <View className="flex-1 bg-gray-700 justify-center items-center p-10">

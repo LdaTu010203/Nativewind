@@ -1,18 +1,19 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import ItemList from "@/components/organism/itemList";
+import DisplayUser from "@/components/molecules/users";
 
 const Home = () => {
   return (
     <View className="flex-1 bg-Dark-Background justify-center items-center p-5">
       <View className="p-4 flex flex-row self-center pt-10">
         <View className="flex flex-col px-2">
-          <Text className="font-PolyRegular text-2xl text-Dark-textContent">
-            Welcome Back, Homie
+          <Text className="font-PolyRegular text-2xl text-Dark-textTitle">
+            Welcome Back, <DisplayUser userId={2} />
           </Text>
-          <Text className="font-PolyRegular text-2xl text-Dark-textContent">
+          <Text className="font-PolyRegular text-2xl text-Dark-textTitle">
             How's going today?
           </Text>
         </View>

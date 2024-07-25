@@ -12,10 +12,10 @@ module.exports = {
       },
       colors: {
         Dark: {
-          Background: "#343434",
+          Background: "#000000",
           textTitle: "#FCFAF1",
           textContent: "#E6B31E",
-          header: "#CACACA",
+          header: "#222831",
         },
         Light: {
           Background: "#FCFAF1",

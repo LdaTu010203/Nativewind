@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity, StatusBar } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
+import DisplayUser from "@/components/molecules/users";
 
 const Acc = () => {
   return (
@@ -15,9 +16,7 @@ const Acc = () => {
             />
           </View>
           <View className="flex-col h-20 pl-5 justify-center">
-            <Text className="text-2xl text-Dark-Background pb-1 font-medium">
-              Tú Lê
-            </Text>
+            <DisplayUser userId={2} />
             <TouchableOpacity className="rounded-full bg-Dark-textTitle w-24 h-6 pl-1 pt-1 items-center">
               <Text className="text-xs text-Dark-Background font-medium">
                 VIP Member
