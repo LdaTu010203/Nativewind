@@ -13,18 +13,18 @@ const Welcome = () => {
 
   if (loading) {
     return (
-      <View className="flex-1 items-center justify-center Dark: bg-Dark-Background">
+      <View className="flex-1 items-center justify-center dark:bg-dark-Background">
         <Image
           source={require("@/assets/images/Logo.png")}
           className="w-96 h-96"
         />
-        <Text className="text-white text-6xl font-PolyRegular pt-7">
+        <Text className="dark:text-dark-Title text-6xl font-PolyRegular pt-7">
           VIETGANGZ
         </Text>
-        <Text className="text-white text-xl font-PolyRegular">
+        <Text className="dark:text-dark-Title text-xl font-PolyRegular">
           OfficalStore-VIETGANGZ
         </Text>
-        <Text className="text-white text-xl font-PolyRegular">
+        <Text className="dark:text-dark-Background text-xl font-PolyRegular">
           IG: vietgangz_original
         </Text>
       </View>
